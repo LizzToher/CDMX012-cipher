@@ -3,12 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Kanit:wght@300&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <header id="root">
+      <h1>Cifrado César</h1>
+    </header>
+    <section class="app">
+    <div class="insert-number">
+      <label for="number">Inserta el número que vas a usar:
+        <input type="number" min="1" max="50" class="number" required>
+      </label>
     </div>
+    <main id="container">
+      <div class="section insert-text">
+      <label for="cipher-text">Escribe tu texto
+        <input type="text" id="input-text">  
+      </label>
+    </div>
+    <div class="section button-container">
+      <button id="encode-btn">Cifrar</button>
+      <button id="decode-btn">Descifrar</button>
+    </div>
+    <div class="section ciphred-text">
+        <p>¡Este es tu texto!</p>
+        <p id="output-text"></p>
+      
+    </div>
+    </main>
+  </section>
+    
     <script src="index.js" type="module"></script>
   </body>
 </html>
