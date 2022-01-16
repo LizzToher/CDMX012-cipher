@@ -22,7 +22,7 @@ h1 {
     color: #011627;
 }
 
-.number {
+#offset {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     color: #011627;
@@ -46,4 +46,8 @@ h1 {
 
 button, label {
     display: block;
+}
+
+#input-text, #output-text {
+    text-transform: uppercase;
 }
