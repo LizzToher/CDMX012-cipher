@@ -4,43 +4,44 @@ import cipher from './cipher.js';
 let displaceNumber = document.getElementById('offset');
 let encodeBtn = document.getElementById('encode-btn');
 let decodeBtn = document.getElementById('decode-btn');
-let string = document.getElementById('input-text');
+let message = document.getElementById('input-text');
 let outputText = document.getElementById('output-text');
 
 //Definiendo eventos
-encodeBtn.addEventListener('click', encode);
+encodeBtn.addEventListener('click', toEncode);
 decodeBtn.addEventListener('click', decode);
 
 //Añadiendo funcionalidad al botón de cifrar
-function encode() {  
-   let encodedText = string.value;
+function toEncode() {  
+   let string = message.value;
    let offset = displaceNumber.value;
 
    if(offset == '') {
       alert('Necesitas ingresar un número.');
    }
-   else if(encodedText == '') {
+   else if(string == '') {
       alert('Necesitas ingresar tu mensaje.');
    }
    else {
-      outputText.innerHTML = encodedText;
+      outputText.innerHTML = cipher.encode(offset, string);
    }
 }
 
+   
 //Añadiendo funcionalidad al botón de descifrar
 function decode() {  
-    let encodedText = string.value;
+    let string = message.value;
     let offset = displaceNumber.value;
 
     if(offset == '') {
       alert('Necesitas ingresar un número.');
    }
-   else if(encodedText == '') {
+   else if(string == '') {
       alert('Necesitas ingresar tu mensaje.');
    }
    else {
-    outputText.innerHTML = encodedText;
+      outputText.innerHTML = string;
    }
  }
 
-console.log(cipher);
+console.log(cipher.encode);
