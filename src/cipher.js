@@ -1,36 +1,30 @@
 const cipher = {
+  
   // Definiendo algoritmo de codificación
   encode(offset, string) {
-    //Definiendo variables
-    let character = '';
-    let space = '';
-    let asciiValue = '';
-    let finalMessage = '';
+  
+    let endMessage = [];
 
-    //Bucle 'for' para recorrer todo el string
-         for(let i = 0; i <= string.length; i++) {
-           asciiValue = string.charCodeAt(i);
-           //console.log(asciiValue);
-           
-           //Condicionales para definir fórmula del cifrado César
-           if(asciiValue >= 65 && asciiValue <= 90) {
-              character = String.fromCharCode((asciiValue - 65 + offset) % 26 + 65);
-              finalMessage = finalMessage + character;
-            }
-            else if(asciiValue === 32) {
-              space = String.fromCharCode(32);
-              finalMessage = finalMessage + space;
-            }
-            
-            //Regresar mensaje de salida
-            console.log(finalMessage);
-            return finalMessage;            
-          }
-          
-/*  decode(offset, string){
-
-  }*/
-}
+    for (let i = 0; i < string.length; i++) {
+      //console.log(i)
+      let asciiValue = Number(string.charCodeAt(i));
+      //console.log(asciiValue);
+      
+      //Condicionales para definir fórmula del cifrado César
+      if (asciiValue >= 65 && asciiValue <= 90) {
+        let finalMessage = String.fromCharCode((asciiValue - 65 + offset) % 26 + 65);
+        //console.log(finalMessage);
+        endMessage.push(finalMessage);
+      }
+      else if (asciiValue === 32) {
+        let finalMessage = String.fromCharCode(32);
+        //console.log(finalMessage);
+        endMessage.push(finalMessage);
+      }
+    }
+    return endMessage.join('');
+  }
+  
 }
 
 export default cipher;

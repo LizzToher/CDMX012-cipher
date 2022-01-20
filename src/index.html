@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind&family=Kanit:wght@300&family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="root">
-      <h1>Cifrado César</h1>
-    </header>
-    <section class="app">
-    
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind&family=Kanit:wght@300&family=Montserrat&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header id="root">
+    <h1>Cifrado César</h1>
+  </header>
+  
+  <section class="app">
     <main id="container">
       <div class="insert-number">
         <label for="number">Inserta el número que vas a usar:
@@ -19,22 +22,22 @@
         </label>
       </div>
       <div class="section insert-text">
-      <label for="cipher-text">Escribe tu texto
-        <input type="textarea" id="input-text">  
-      </label>
-    </div>
-    <div class="section button-container">
-      <button id="encode-btn">Cifrar</button>
-      <button id="decode-btn">Descifrar</button>
-    </div>
-    <div class="section ciphred-text">
+        <label for="cipher-text">Escribe tu texto
+          <input type="textarea" id="input-text">
+        </label>
+      </div>
+      <div class="section button-container">
+        <button id="encode-btn">Cifrar</button>
+        <button id="decode-btn">Descifrar</button>
+      </div>
+      <div class="section ciphred-text">
         <p>¡Este es tu texto!</p>
         <p id="output-text"></p>
-      
-    </div>
+      </div>
     </main>
   </section>
-    
-    <script src="index.js" type="module"></script>
-  </body>
+
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
