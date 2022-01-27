@@ -43,4 +43,4 @@ function decode() {
   }
 }
 
-//yconsole.log(cipher.encode);
+console.log(cipher.encode);

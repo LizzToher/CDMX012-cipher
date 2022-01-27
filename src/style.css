@@ -96,7 +96,18 @@ label {
 #decode-btn {
   padding: auto 5px;
   margin: 50px auto 0px;
-  
+}
+
+#decode-btn:hover {
+  padding: 3px 8px;
+  transition-duration: 0.1s;
+}
+
+#decode-btn:focus {
+  padding: 3px 8px;
+  background-color: #011627;
+  border-color: #011627;
+  color: #E71D36;
 }
 
 .ciphred-text {
